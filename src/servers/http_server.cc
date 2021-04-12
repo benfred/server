@@ -1954,6 +1954,9 @@ HTTPAPIServer::EVBufferToInput(
     json_header_len = header_length;
   }
 
+  LOG_ERROR << "Received " << evbuffer_get_length(input_buffer) << " bytes";
+  // FIXME decompress
+
   RETURN_IF_ERR(EVBufferToJson(&request_json, v, &v_idx, json_header_len, n));
 
   // Set InferenceRequest request_id

@@ -31,6 +31,11 @@ namespace nvidia { namespace inferenceserver {
 
 constexpr char kInferHeaderContentLengthHTTPHeader[] =
     "Inference-Header-Content-Length";
+// FIXME accept encoding can be a list
+constexpr char kAcceptEncodingHTTPHeader[] =
+    "Accept-Encoding";
+constexpr char kContentEncodingHTTPHeader[] =
+    "Content-Encoding";
 
 #ifdef TRITON_ENABLE_TENSORFLOW
 constexpr char kTensorFlowGraphDefPlatform[] = "tensorflow_graphdef";
